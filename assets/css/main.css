@@ -23,4 +23,11 @@ html body {
   margin: 0;
   padding: 0;
 }
+
+html body footer .copyright {
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 250;
+  line-height: 1.1rem;
+}
 /*# sourceMappingURL=main.css.map */
