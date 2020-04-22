@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
         content="Creative studio founded in 2020. Freelance illustrator and graphic designer from Rennes, France." />
-    <link rel="shortcut icon" type="png" href="./assets/img/favicon.png" />
-    <link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
-    <link rel="stylesheet" href="./assets/css/home.css" type="text/css" />
+    <link rel="shortcut icon" type="png" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <link rel="stylesheet" href="../css/works.css" type="text/css" />
     <!-- <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css"> -->
     <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh" />
-    <title>Crabby Kōbō | Home</title>
+    <title>Crabby Kōbō | Les Horizons</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115882733-1"></script>
@@ -24,40 +24,13 @@
 		}
 		gtag("js", new Date());
 		gtag("config", "UA-115882733-1");
-	</script> -->
-</head>
+    </script> -->
 
 <body>
-    <div class="parallax">
-        <ul id="scene">
-            <li class="layer" data-depth="0.1">
-                <img src="./assets/img/parallax/sun.png" width="100%" />
-            </li>
-            <li class="layer" data-depth="0.25">
-                <img src="./assets/img/parallax/building.png" width="100%" />
-            </li>
-        </ul>
-    </div>
-
-    <script src="./assets/js/parallax.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var scene = document.getElementById("scene");
-        var parallax = new Parallax(scene);
-    </script>
-
-    <div class="content">
-        <div class="home">
-            <h1>Crabby Kōbō</h1>
-            <!-- <img src="./assets/img/logo.svg" alt="Crabby Kōbō logo"> -->
-            <!-- <h1>気難しい 工房</h1> -->
-            <span class="subtitle">/* creative studio */</span>
-            <p>
-                <a href="./assets/html/gallery.html">
-                    <button class="gallery" type="button">Gallery</button></a>
-                <a href="./assets/html/about.html">
-                    <button class="about" type="button">About</button></a>
-            </p>
-        </div>
+    <header>
+        <a href="../../index.html">
+            <img class="logo" src="../img/logo.svg" alt="Crabby Kōbō logo">
+        </a>
 
         <div class="rs">
             <p>
@@ -77,7 +50,48 @@
                 </ul>
             </p>
         </div>
+
+        <div class="language">
+            <p>FR</p>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="ariane">
+            <a href="../../index.html">Home</a> / <a href="./gallery.html">Gallery</a> / <a
+                href="./les-horizons.html">Les Horizons</a>
+        </div>
+
+        <div class="title">
+            <h2>Les Horizons</h2>
+            <span class="subtitle">Illustrations series</span>
+        </div>
+
+        <div class="desc">
+            <img src="../img/gallery/crabby-kobo-les-horizons.png" alt="Crabby Kōbō, Les Horizons, 2020.">
+        </div>
+
+        <div class="related-works">
+            <h3>You may also like</h3>
+            <div class="row">
+                <div class="column column1">
+                    <img src="../img/gallery/crabby-kobo-window.png">
+                </div>
+                <div class="column column2">
+                    <img src="../img/gallery/crabby-kobo-torii.png">
+                </div>
+                <div class="column column3">
+                    <img src="../img/gallery/crabby-kobo-vinyl.png">
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        <p class="copyright">Design and production by Crabby Kōbō <br> © Copyright 2020 Crabby Kōbō | All
+            rights
+            reserved</p>
+    </footer>
 </body>
 
 </html>

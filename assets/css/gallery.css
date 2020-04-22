@@ -1,29 +1,25 @@
 .content {
-  background-color: #fff;
-  position: relative;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "title" "filters" "gallery" "relatedworks";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto auto auto auto;
-      grid-template-rows: auto auto auto auto;
-  padding-bottom: 120px;
 }
 
-.filters {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: filters;
-  margin: 0 calc(80px - 5px) 0 calc(80px - 5px);
+.gallery-title {
+  grid-area: title;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: .8em auto 2.2em auto;
+}
+
+.gallery-title h2 {
+  margin-bottom: 0;
 }
 
 .filters #filters {
   list-style: none;
   text-align: center;
-  padding: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: .9em;
 }
 
 .filters #filters li {
@@ -46,7 +42,7 @@
 .filters #filters li span.active {
   background: var(--color);
   border-radius: 50px;
-  padding: 7px 10px;
+  padding: 7px 12px;
   color: #fff;
 }
 
@@ -68,19 +64,12 @@
   }
 }
 
-#gallery {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: gallery;
-  margin: 1rem calc(80px - 16px);
-}
-
 #gallery .portfolio {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   width: 30%;
-  margin: 1rem;
+  margin: 2em 1em 1em 1em;
   display: none;
   float: left;
   overflow: hidden;
@@ -110,6 +99,7 @@
 }
 
 #gallery .portfolio .portfolio-wrapper .label .label-bg {
+  position: absolute;
   background: var(--dark);
   width: 100%;
   height: 100%;

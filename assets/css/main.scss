@@ -37,28 +37,41 @@
 
 html {
     background: #fff;
+    // background: var(--light);
 
     body {
         font-family: "Montserrat", sans-serif;
         color: var(--dark);
         margin: 0;
         padding: 0;
+        display: grid;
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
 
         header {
+            grid-area: header;
             background-color: var(--dark);
             width: 100%;
             height: 8em;
             display: grid;
             grid-template-areas:
                 "logo rs language";
-            grid-template-columns: 40% auto 10%;
+            grid-template-columns: auto auto 15%;
             grid-template-rows: 100%;
 
             .logo {
                 grid-area: logo;
                 height: 6em;
                 margin-top: 1em;
-                margin-left: calc(80px - 5px);
+                margin-left: 10.75em;
+
+                img {
+                    height: 100%;
+                }
             }
 
             .rs {
@@ -67,7 +80,7 @@ html {
                 top: 0;
                 right: 0;
                 margin-top: 1.1em;
-                margin-right: 200px;
+                margin-right: 260px;
 
                 ul {
                     margin: 0;
@@ -123,14 +136,13 @@ html {
                 grid-area: language;
                 top: 0;
                 right: 0;
-                margin-top: 1.6em;
-                margin-right: 7.5em;
+                margin: 1.7em 10.75em 0 auto;
 
                 p {
                     color: var(--light);
                     border: solid 1.5px var(--light);
                     border-radius: 50px;
-                    padding: 8px 28px 6px 7px;
+                    padding: 6.5px;
                 }
 
                 p:hover {
@@ -141,21 +153,106 @@ html {
         }
 
         .content {
+            grid-area: content;
+            margin: 0 10em;
+
+            .ariane {
+                margin: 3em .75em;
+                font-weight: 200;
+
+                a {
+                    text-decoration: none;
+                    color: var(--dark);
+                }
+            }
+
             .title {
                 grid-area: title;
                 font-size: 2.5rem;
                 text-align: center;
-                margin: .8em auto 0 auto;
+                margin: .8em auto 3em auto;
+
+                h2 {
+                    margin-bottom: 0;
+                }
+
+                .subtitle {
+                    font-weight: 300;
+                    font-size: 18px;
+                    color: var(--color);
+                    letter-spacing: 1px;
+                }
+            }
+
+            .desc {
+                margin: 0 .75em;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .related-works {
+                margin-top: 9em;
+
+                h3 {
+                    margin-bottom: 2em;
+                    text-align: center;
+                    font-size: 2em;
+                }
+
+                .row {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .column {
+                        flex: 25%;
+                        width: 30%;
+                        margin: 0 .75em;
+
+                        img {
+                            vertical-align: middle;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                @media all and (max-width: 1090px) {
+                    .column {
+                        width: 45%;
+                        margin: .7em;
+                    }
+                }
+
+                @media all and (max-width: 900px) {
+                    .column {
+                        width: 100%;
+                    }
+
+                    .column3 {
+                        display: none;
+                    }
+                }
+
+                @media all and (max-width: 414px) {
+                    .column2 {
+                        display: none;
+                    }
+                }
+
             }
         }
 
         footer {
+            grid-area: footer;
+            margin: 5em auto 3em auto;
+
             .copyright {
                 text-align: center;
-                font-size: .8rem;
-                font-weight: 250;
+                font-size: .7rem;
+                font-weight: 300;
                 line-height: 1.1rem;
-                margin: 2rem;
+                text-transform: uppercase;
             }
         }
     }

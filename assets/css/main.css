@@ -22,17 +22,27 @@ html body {
   color: var(--dark);
   margin: 0;
   padding: 0;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "content" "footer";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
 }
 
 html body header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
   background-color: var(--dark);
   width: 100%;
   height: 8em;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "logo rs language";
-  -ms-grid-columns: 40% auto 10%;
-      grid-template-columns: 40% auto 10%;
+  -ms-grid-columns: auto auto 15%;
+      grid-template-columns: auto auto 15%;
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
 }
@@ -43,7 +53,11 @@ html body header .logo {
   grid-area: logo;
   height: 6em;
   margin-top: 1em;
-  margin-left: calc(80px - 5px);
+  margin-left: 10.75em;
+}
+
+html body header .logo img {
+  height: 100%;
 }
 
 html body header .rs {
@@ -54,7 +68,7 @@ html body header .rs {
   top: 0;
   right: 0;
   margin-top: 1.1em;
-  margin-right: 200px;
+  margin-right: 260px;
 }
 
 html body header .rs ul {
@@ -110,15 +124,14 @@ html body header .language {
   grid-area: language;
   top: 0;
   right: 0;
-  margin-top: 1.6em;
-  margin-right: 7.5em;
+  margin: 1.7em 10.75em 0 auto;
 }
 
 html body header .language p {
   color: var(--light);
   border: solid 1.5px var(--light);
   border-radius: 50px;
-  padding: 8px 28px 6px 7px;
+  padding: 6.5px;
 }
 
 html body header .language p:hover {
@@ -126,18 +139,114 @@ html body header .language p:hover {
   background-color: var(--light);
 }
 
+html body .content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+  margin: 0 10em;
+}
+
+html body .content .ariane {
+  margin: 3em .75em;
+  font-weight: 200;
+}
+
+html body .content .ariane a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
 html body .content .title {
   grid-area: title;
   font-size: 2.5rem;
   text-align: center;
-  margin: .8em auto 0 auto;
+  margin: .8em auto 3em auto;
+}
+
+html body .content .title h2 {
+  margin-bottom: 0;
+}
+
+html body .content .title .subtitle {
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--color);
+  letter-spacing: 1px;
+}
+
+html body .content .desc {
+  margin: 0 .75em;
+}
+
+html body .content .desc img {
+  width: 100%;
+}
+
+html body .content .related-works {
+  margin-top: 9em;
+}
+
+html body .content .related-works h3 {
+  margin-bottom: 2em;
+  text-align: center;
+  font-size: 2em;
+}
+
+html body .content .related-works .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+html body .content .related-works .row .column {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  width: 30%;
+  margin: 0 .75em;
+}
+
+html body .content .related-works .row .column img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media all and (max-width: 1090px) {
+  html body .content .related-works .column {
+    width: 45%;
+    margin: .7em;
+  }
+}
+
+@media all and (max-width: 900px) {
+  html body .content .related-works .column {
+    width: 100%;
+  }
+  html body .content .related-works .column3 {
+    display: none;
+  }
+}
+
+@media all and (max-width: 414px) {
+  html body .content .related-works .column2 {
+    display: none;
+  }
+}
+
+html body footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  margin: 5em auto 3em auto;
 }
 
 html body footer .copyright {
   text-align: center;
-  font-size: .8rem;
-  font-weight: 250;
+  font-size: .7rem;
+  font-weight: 300;
   line-height: 1.1rem;
-  margin: 2rem;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */
