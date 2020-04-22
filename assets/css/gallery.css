@@ -64,12 +64,16 @@
   }
 }
 
+#gallery {
+  margin: 2.5em auto 1em auto;
+}
+
 #gallery .portfolio {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   width: 30%;
-  margin: 2em 1em 1em 1em;
+  margin: 1.1em;
   display: none;
   float: left;
   overflow: hidden;
