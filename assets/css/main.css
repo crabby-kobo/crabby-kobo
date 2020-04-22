@@ -131,12 +131,25 @@ html body header .language p {
   color: var(--light);
   border: solid 1.5px var(--light);
   border-radius: 50px;
+  font-size: 1em;
+}
+
+html body header .language .en {
+  padding: 6.5px 5.5px;
+}
+
+html body header .language .fr {
   padding: 6.5px;
 }
 
 html body header .language p:hover {
   color: var(--dark);
   background-color: var(--light);
+}
+
+html body header .language a {
+  text-decoration: none;
+  color: var(--light);
 }
 
 html body .content {
@@ -160,7 +173,7 @@ html body .content .title {
   grid-area: title;
   font-size: 2.5rem;
   text-align: center;
-  margin: .8em auto 3em auto;
+  margin: .8em auto 2em auto;
 }
 
 html body .content .title h2 {
@@ -175,11 +188,21 @@ html body .content .title .subtitle {
 }
 
 html body .content .desc {
-  margin: 0 1.4em 0 1.1em;
+  margin: 0 1.1em;
 }
 
 html body .content .desc img {
   width: 100%;
+}
+
+html body .content .desc .text {
+  margin-bottom: 4em;
+}
+
+html body .content .desc .text p {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 1em;
 }
 
 html body footer {
