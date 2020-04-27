@@ -100,7 +100,7 @@
 }
 
 .content .rs .socicon:hover {
-  color: #121b35;
+  color: var(--dark);
   background-color: var(--color);
 }
 /*# sourceMappingURL=home.css.map */
